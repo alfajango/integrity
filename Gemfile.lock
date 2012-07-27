@@ -63,15 +63,15 @@ GEM
       dm-core (~> 1.2.0)
     dm-migrations (1.2.0)
       dm-core (~> 1.2.0)
+    dm-postgres-adapter (1.2.0)
+      dm-do-adapter (~> 1.2.0)
+      do_postgres (~> 0.10.6)
     dm-serializer (1.2.1)
       dm-core (~> 1.2.0)
       fastercsv (~> 1.5.4)
       json (~> 1.6.1)
       json_pure (~> 1.6.1)
       multi_json (~> 1.0.3)
-    dm-sqlite-adapter (1.2.0)
-      dm-do-adapter (~> 1.2.0)
-      do_sqlite3 (~> 0.10.6)
     dm-sweatshop (1.2.0)
       ParseTree (~> 3.0.7)
       dm-core (~> 1.2.0)
@@ -90,7 +90,7 @@ GEM
       uuidtools (~> 2.1.2)
     dm-validations (1.2.0)
       dm-core (~> 1.2.0)
-    do_sqlite3 (0.10.8)
+    do_postgres (0.10.8)
       data_objects (= 0.10.8)
     extlib (0.9.15)
     fastercsv (1.5.5)
@@ -113,6 +113,7 @@ GEM
     nokogiri (1.4.4)
     notifo (0.1.0)
       httparty (~> 0.4.5)
+    pg (0.14.0)
     polyglot (0.3.3)
     pony (1.1)
       mail (> 2.0)
@@ -162,9 +163,8 @@ DEPENDENCIES
   data_mapper (~> 1.2.0)
   delayed_job
   delayed_job_active_record
-  dm-sqlite-adapter
+  dm-postgres-adapter (~> 1.2.0)
   dm-sweatshop
-  do_sqlite3
   extlib (= 0.9.15)
   haml (~> 3.1.6)
   hpricot (= 0.8.3)
@@ -173,6 +173,7 @@ DEPENDENCIES
   nap (= 0.4)
   nokogiri (= 1.4.4)
   notifo (= 0.1.0)
+  pg
   pony (= 1.1)
   rack-test (= 0.5.7)
   randexp (~> 0.1.6)
