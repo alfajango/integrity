@@ -41,7 +41,7 @@ Integrity.configure do |c|
   c.directory                 = File.dirname(__FILE__) + '/tmp/builds'
   c.base_url                    = "http://ci.alfajango.com"
   # Heroku - Comment out c.log
-  c.log                         = "integrity.log"
+  #c.log                         = "integrity.log"
   c.github_token                = "SECRET"
   c.build_all                   = true
   c.trim_branches               = false
