@@ -29,17 +29,17 @@ require "integrity"
 # require "integrity/notifier/coop"
 
 Integrity.configure do |c|
-  c.database                    = "sqlite3:db/integrity.db"
+  #c.database                    = "sqlite3:db/integrity.db"
   # PostgreSQL via the local socket to "integrity" database:
   # c.database                  = "postgres:///integrity"
   # PostgreSQL via a more full specification:
   # c.database                  = "postgres://user:pass@host:port/database"
   # Heroku
-  # c.database                  = ENV['DATABASE_URL']
-  c.directory                   = "builds"
+  c.database                  = ENV['DATABASE_URL']
+  #c.directory                   = "builds"
   # Heroku
-  # c.directory                 = File.dirname(__FILE__) + '/tmp/builds'
-  c.base_url                    = "http://ci.example.org"
+  c.directory                 = File.dirname(__FILE__) + '/tmp/builds'
+  c.base_url                    = "http://ci.alfajango.com"
   c.log                         = "integrity.log"
   c.github_token                = "SECRET"
   c.build_all                   = true
